@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <style>
+        body {
+            display: block;
+            background-color: rgb(194, 238, 223);
+            font-family: Arial, sans-serif;
+            line-height: 2;
+            color: #333;
+            margin: 100px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>{{user_details.name}}</h1>
+    </header>
+
+    <section>
+        <h2>Contact Information</h2>
+        <ul>
+            <li>{{user_details.email}}</li>
+            <li>{{user_details.phone}}</li>
+            <!-- <li>LinkedIn: linkedin.com/in/yourname</li>
+            <li>GitHub: github.com/yourusername</li> -->
+            <!-- Add more contact information as needed -->
+        </ul>
+    </section><hr>
+
+    <section>
+        <h2>Summary</h2>
+        <p>
+            {{user_details.summary}}
+        </p>
+    </section><hr>
+
+    <section>
+        <h2>Education</h2>
+        <p><strong>{{user_details.degree}}</strong></p>
+        <p>from {{user_details.school}}</p>
+    </section><hr>
+
+    <section>
+        <h2>Work Experience</h2>
+        <p>{{user_details.work_experience}}</p>
+        <!-- <p><strong>Job Title</strong></p>
+        <p>Company Name, Start Date - End Date</p>
+        <ul>
+            <li>Responsibility/Accomplishment 1</li>
+            <li>Responsibility/Accomplishment 2</li>
+            ___________________________________
+        </ul>
+
+        <p><strong>Job Title</strong></p>
+        <p>Company Name, Start Date - End Date</p>
+        <ul>
+            <li>Responsibility/Accomplishment 1</li>
+            <li>Responsibility/Accomplishment 2</li>
+            Add more responsibilities/accomplishments as needed -->
+        </ul>
+    </section><hr>
+
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skill_list %}
+                <li>{{skill}}</li>
+            {% endfor %}
+        </ul>
+        
+            
+        <!-- <p>{{user_details.skills}}</p> -->
+        <!-- <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python, Django</li>
+            <li>React, Vue.js</li>
+            <li>SQL, MongoDB</li>
+        </ul> -->
+    </section><hr>
+</body>
+
+</html>
